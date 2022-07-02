@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Link } from "@remix-run/react";
-import { TodoListItem } from "~/components/TodoListItem/todoListItem";
+import { SingleTodoList } from "~/components/SingleTodoList/singleTodoList";
 import { TodoListsContext } from "~/contexts/TodoListsContext";
 
 const TodoListsIndex = () => {
@@ -9,7 +9,7 @@ const TodoListsIndex = () => {
 
   const addNewTodoList = () => {
     if (input !== "") {
-      setTodoLists((oldTodoLists: any) => [...oldTodoLists, input])
+      setTodoLists((oldTodoLists: any) => [...oldTodoLists, {name: input, todoListItems: []}])
       setInput("");
     }
   }
@@ -23,10 +23,10 @@ const TodoListsIndex = () => {
         </div>
         <div className="todolists">
           {
-            todoLists.map(item => {
+            todoLists.map((item: any) => {
               return (
                 <Link to={todoLists.indexOf(item).toString()} key={todoLists.indexOf(item).toString()}>
-                  <TodoListItem name={item} id={todoLists.indexOf(item)} />
+                  <SingleTodoList name={item.name} id={todoLists.indexOf(item)} />
                 </Link>
               )
             })

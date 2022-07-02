@@ -1,7 +1,7 @@
 import { createContext, useState, FunctionComponent } from "react";
 
 interface TodoListsContextInterface {
-  todoLists: string[];
+  todoLists: any;
   setTodoLists: (i: any) => void;
 }
 
@@ -10,7 +10,7 @@ const TodoListsContext = createContext({} as TodoListsContextInterface);
 const TodoListsProvider: FunctionComponent = ({
   children,
 }) => {
-  const [todoLists, setTodoLists] = useState([]);
+  const [todoLists, setTodoLists] = useState([] as any);
 
   return (
     <TodoListsContext.Provider value={{todoLists, setTodoLists}}>

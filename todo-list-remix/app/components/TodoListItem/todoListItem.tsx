@@ -1,13 +1,11 @@
-interface TodoListProps {
-  name: string;
-  id: number;
-}
 
-const TodoListItem = ({ name, id }: TodoListProps) => {
+const TodoListItem = ({item}) => {
 
   return (
-    <div className="todolist-container">
-      {name} - {id}
+    <div className="todolist-item">
+      <input id="checkbox" className="checkbox" type="checkbox" />
+      <p>{item}</p>
+      <p className="date-added"></p>
     </div>
   )
 }
