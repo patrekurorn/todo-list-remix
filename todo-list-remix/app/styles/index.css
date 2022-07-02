@@ -1,0 +1,24 @@
+
+.header-container {
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid lightgray;
+  display: flex;
+  justify-content: center;
+}
+
+.todolists-container {
+  width: 100%;
+  background-color: lightblue;
+  padding-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todolist-container {
+  width: 100%;
+  height: 50px;
+  background-color: lightcyan;
+  margin: 10px;
+}
