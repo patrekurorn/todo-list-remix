@@ -1,5 +1,5 @@
 
-const TodoListItem = ({item}) => {
+const TodoListItem = (item: any) => {
 
   return (
     <div className="todolist-item">

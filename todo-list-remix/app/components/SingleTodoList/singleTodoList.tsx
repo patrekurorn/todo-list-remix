@@ -1,13 +1,14 @@
 interface TodoListProps {
   name: string;
-  id: number;
+  date: string;
 }
 
-const SingleTodoList = ({ name, id }: TodoListProps) => {
+const SingleTodoList = ({ name, date }: TodoListProps) => {
 
   return (
     <div className="todolist-container">
-      {name} - {id}
+      <p>{name}</p>
+      <p className="date-added">{date}</p>
     </div>
   )
 }

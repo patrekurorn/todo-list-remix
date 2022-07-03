@@ -7,9 +7,12 @@
   justify-content: center;
 }
 
+.header-title:hover {
+  opacity: 0.8;
+}
+
 .todolists-container {
   width: 100%;
-  background-color: lightblue;
   padding-top: 50px;
   display: flex;
   flex-direction: column;
@@ -17,10 +20,19 @@
 }
 
 .todolist-container {
-  width: 100%;
-  height: 50px;
-  background-color: lightcyan;
+  width: 200px;
+  height: 100%;
   margin: 10px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  transition: transform .2s ease-in-out;
+}
+
+.todolist-container:hover {
+  transform: scale(1.1);
 }
 
 .todolist-items-container {
@@ -30,10 +42,22 @@
 }
 
 .todolist-item-container {
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todolist-item {
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.todolists-item {
   display: flex;
   align-items: center;
 }
@@ -41,4 +65,83 @@
 .date-added {
   font-size: small;
   margin-left: auto;
+}
+
+.location-loading {
+  margin-top: 20px;
+}
+
+.task-name {
+  padding-right: 5px;
+}
+
+.checkbox:hover {
+  cursor: pointer;
+}
+
+.delete-button {
+  border: transparent;
+  background-color: transparent;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.delete-icon {
+  height: 15px;
+  width: 15px;
+}
+
+.add-button {
+  margin-left: 20px;
+  background-color: #006ee6;
+  border: 1px solid #d5d9d9;
+  border-radius: 8px;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  box-sizing: border-box;
+  color: #0f1111;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.add-button:hover {
+  opacity: .9;
+}
+
+.add-button:focus {
+  border-color: #008296;
+  box-shadow: rgba(213, 217, 217, .5) 0 2px 5px 0;
+  outline: 0;
+}
+
+.add-button-text {
+  margin: 0;
+  color: white;
+}
+
+.priority {
+  margin-left: 20px;
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  height: 31px;
+}
+
+.input-field {
+  border: 1px solid #d5d9d9;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 29px;
+  padding: 0 10px 0 11px;
 }
