@@ -4,7 +4,7 @@ const Header = () => {
 
   return (
     <div className="header-container">
-      <Link to="/todolists" style={{textDecoration:"none", color:"black"}}>
+      <Link to="/todolists" className="link">
         <p className="header-title">Todo lists</p>
       </Link>
     </div>

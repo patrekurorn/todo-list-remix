@@ -39,7 +39,7 @@ const TodoListsIndex = () => {
             todoLists.map((item: any) => {
               return (
                 <div className="todolists-item">
-                  <Link to={todoLists.indexOf(item).toString()} key={todoLists.indexOf(item).toString()} style={{textDecoration:"none", color:"black"}}>
+                  <Link className="link" to={todoLists.indexOf(item).toString()} key={todoLists.indexOf(item).toString()} >
                     <SingleTodoList name={item.name} date={item.date} />
                   </Link>
                   <button className="delete-button" onClick={() => removeFromTodoLists(todoLists.indexOf(item))}><FaTrashAlt className="delete-icon"/></button>
