@@ -12,7 +12,6 @@ const TodoListsIndex = () => {
   const addNewTodoList = () => {
     if (input !== "") {
       setTodoLists((oldTodoLists: any) => [...oldTodoLists, {
-        id: oldTodoLists.length.toString(),
         name: input,
         location: "",
         date: getCurrentDate(),
@@ -40,7 +39,7 @@ const TodoListsIndex = () => {
             todoLists.map((item: any) => {
               return (
                 <div className="todolists-item">
-                  <Link to={item.id} key={item.id} style={{textDecoration:"none", color:"black"}}>
+                  <Link to={todoLists.indexOf(item).toString()} key={todoLists.indexOf(item).toString()} style={{textDecoration:"none", color:"black"}}>
                     <SingleTodoList name={item.name} date={item.date} />
                   </Link>
                   <button className="delete-button" onClick={() => removeFromTodoLists(todoLists.indexOf(item))}><FaTrashAlt className="delete-icon"/></button>
